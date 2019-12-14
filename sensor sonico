@@ -64,21 +64,20 @@ void loop()
 {
   if (( ( ardublockUltrasonicMesure( 11 , 12 , 0 )  ) < ( 60 ) ))
   {
-    delay( 1000 );
     direita();
+    delay( 500 );
   }
   else
   {
-    frente();
     if (( ( __ardublockDigitalRead(2) ) == ( LOW ) ))
     {
-      direita();
+      esquerda();
     }
     else
     {
       if (( ( __ardublockDigitalRead(4) ) == ( LOW ) ))
       {
-        esquerda();
+        direita();
       }
       else
       {
@@ -90,7 +89,7 @@ void loop()
 
 void direita()
 {
-  analogWrite(3 , 220);
+  analogWrite(3 , 160);
   analogWrite(5 , 0);
   analogWrite(6 , 0);
   analogWrite(9 , 0);
@@ -99,16 +98,16 @@ void direita()
 void re()
 {
   analogWrite(3 , 0);
-  analogWrite(5 , 220);
+  analogWrite(5 , 160);
   analogWrite(6 , 0);
-  analogWrite(9 , 220);
+  analogWrite(9 , 160);
 }
 
 void esquerda()
 {
   analogWrite(3 , 0);
   analogWrite(5 , 0);
-  analogWrite(6 , 220);
+  analogWrite(6 , 160);
   analogWrite(9 , 0);
 }
 
@@ -122,9 +121,9 @@ void parar()
 
 void frente()
 {
-  analogWrite(3 , 220);
+  analogWrite(3 , 160);
   analogWrite(5 , 0);
-  analogWrite(6 , 220);
+  analogWrite(6 , 160);
   analogWrite(9 , 0);
 }
 
