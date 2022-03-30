@@ -62,7 +62,7 @@ void setup()
 
 void loop()
 {
-  if (( ( ardublockUltrasonicMesure( 11 , 12 , 0 )  ) < ( 60 ) ))
+  if (( ( ardublockUltrasonicMeasure( 11 , 12 , 0 )  ) < ( 60 ) ))
   {
     direita();
     delay( 500 );
